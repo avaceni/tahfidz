@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    font-size: 13px;
+    margin: 0;
+}
+
+body{
+    background: #272F35;
+    font-family: sans-serif;
+}
+
+#container{
+    position: relative;
+    width: 421px;
+    margin: 11% auto;
+    padding: 21px;
+    background: #fff;
+}
+
+#title{
+    font-size: 25px;
+}
+
+.form{
+/*    text-align: center;*/
+box-sizing: border-box;
+}
+
+.rememberMe label{
+    font-size: 16px;
+}
+
+.content{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.forget-password a{
+    margin-top: 21px;
+    float: left;
+    color: #FF5800;
+/*    color: #47d9bf;*/
+    font-size: 15px;
+}
+
+/*help*/
+.clear{
+    clear: both;
+}

@@ -1,0 +1,176 @@
+<div id="wrap" class="mainview-animation animated">
+    <div id="page-heading">
+        <?php
+        $this->widget('application.components.BreadCrumb', array(
+            'crumbs' => array(
+                array('name' => 'Home', 'url' => array('adminck/dashboard')),
+            ),
+        ));
+        ?>
+        <h1>Dasboard</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a href="" class="info-tiles tiles-danger">
+                                    <div class="tiles-heading">
+                                        <div class="text-center">SD</div>
+                                    </div>
+                                    <div class="tiles-body no-bdr-radius">
+                                        <div class="pull-left"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/icon_sd.png" height="46px"></div>
+                                        <div class="pull-right"><?php echo ($total_santri['sd_putra'] + $total_santri['sd_putri']) ?></div>
+                                    </div>
+                                    <div class="tiles-footer">
+                                        <div class="text-center footer-box">
+                                            <span class="footer-column"><?php echo ($total_santri['sd_putra']) ?><sup>Putra</sup></span>
+                                            <span class="footer-column"><?php echo ($total_santri['sd_putri']) ?><sup>Putri</sup></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="" class="info-tiles tiles-info">
+                                    <div class="tiles-heading">
+                                        <div class="text-center">SMP</div>
+                                    </div>
+                                    <div class="tiles-body no-bdr-radius">
+                                        <div class="pull-left"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/icon_smp.png" height="46px"></div>
+                                        <div class="pull-right"><?php echo ($total_santri['smp_putra'] + $total_santri['smp_putri']) ?></div>
+                                    </div>
+                                    <div class="tiles-footer">
+                                        <div class="text-center footer-box">
+                                            <span class="footer-column"><?php echo ($total_santri['smp_putra']) ?><sup>Putra</sup></span>
+                                            <span class="footer-column"><?php echo ($total_santri['smp_putri']) ?><sup>Putri</sup></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="" class="info-tiles tiles-inverse">
+                                    <div class="tiles-heading">
+                                        <div class="text-center">SMA</div>
+                                    </div>
+                                    <div class="tiles-body no-bdr-radius">
+                                        <div class="pull-left"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/icon_sma.png" height="46px"></div>
+                                        <div class="pull-right"><?php echo ($total_santri['sma_putra'] + $total_santri['sma_putri']) ?></div>
+                                    </div>
+                                    <div class="tiles-footer">
+                                        <div class="text-center footer-box">
+                                            <span class="footer-column"><?php echo ($total_santri['sma_putra']) ?><sup>Putra</sup></span>
+                                            <span class="footer-column"><?php echo ($total_santri['sma_putri']) ?><sup>Putri</sup></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="" class="info-tiles tiles-green">
+                                    <div class="tiles-heading">
+                                        <div class="text-center">Mahasiswa</div>
+                                    </div>
+                                    <div class="tiles-body no-bdr-radius">
+                                        <div class="pull-left"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/icon_mahasiswa.png" height="46px"></div>
+                                        <div class="pull-right"><?php echo ($total_santri['mahasiswa_putra'] + $total_santri['mahasiswa_putri']) ?></div>
+                                    </div>
+                                    <div class="tiles-footer">
+                                        <div class="text-center footer-box">
+                                            <span class="footer-column"><?php echo ($total_santri['mahasiswa_putra']) ?><sup>Putra</sup></span>
+                                            <span class="footer-column"><?php echo ($total_santri['mahasiswa_putri']) ?><sup>Putri</sup></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- statistik keuangan -->
+                        <div class="panel no-padding">
+                            <div class="panel-heading">
+                                <h2 class="ng-binding">Grafik Keuangan</h2>
+                                <div class="panel-ctrls">
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div id="chart" style="height: 400px;">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel no-padding">
+                    <div class="panel-heading">
+                        <h2>Top 10 Hafalan Terbanyak</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-container tab-midnightblue tab-top">
+                            <ul class="nav nav-tabs c-top-reciters">
+                                <li class="active"><a data-grade="sd">SD</a></li>
+                                <li><a data-grade="smp">SMP</a></li>
+                                <li><a data-grade="sma">SMA</a></li>
+                                <li><a data-grade="mahasiswa">MAHASISWA</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <?php
+                                foreach ($top_reciter as $grade => $reciters) {
+                                    ?>
+                                    <div class="tab-pane c-pane-reciters <?php echo $grade ?> <?php echo $grade == 'sd' ? 'active' : ''; ?> ">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover" style="margin-bottom:0;">
+                                                <?php
+                                                $i = 1;
+                                                foreach ($reciters as $reciter) {
+                                                    ?>
+                                                    <tr>
+                                                        <td class="col-xs-1"><?php echo $i; ?></td>
+                                                        <td class="col-xs-1"><img src="<?php echo $reciter['foto']; ?>" class="img-circle table-list-avatar"></td>
+                                                        <td class="col-xs-7"><?php echo ucwords($reciter['nama']); ?></td>
+                                                        <td class="col-xs-4 text-right"><?php echo floor($reciter['persen']); ?> Juz</td>
+                                                    </tr>
+                                                    <?php
+                                                    $i++;
+                                                }
+                                                ?>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <?php
+                                /*
+                                  <div class="tab-pane active">
+                                  <div class="table-responsive">
+                                  <table class="table table-hover" style="margin-bottom:0;">
+                                  <tr>
+                                  <td class="col-xs-1">1</td>
+                                  <td class="col-xs-1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/avatar_primus.jpg" class="img-circle table-list-avatar"></td>
+                                  <td class="col-xs-7">Primus Yustisio</td>
+                                  <td class="col-xs-4 text-right">29 Juz</td>
+                                  </tr>
+                                  <tr>
+                                  <td class="col-xs-1">2</td>
+                                  <td class="col-xs-1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/avatar_primus.jpg" class="img-circle table-list-avatar"></td>
+                                  <td class="col-xs-7">Maherzain</td>
+                                  <td class="col-xs-4 text-right">29 Juz</td>
+                                  </tr>
+                                  </table>
+                                  </div>
+                                  </div>
+                                 */
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

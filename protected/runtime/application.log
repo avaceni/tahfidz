@@ -1,0 +1,118 @@
+2015/12/16 13:39:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /mnt/data/Webapps/tahfidz-web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(282): CController->run('donation')
+#8 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('keuangan/data/d...')
+#9 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /mnt/data/Webapps/tahfidz-web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tahfidz-web/keuangan/data/donation
+HTTP_REFERER=http://localhost/tahfidz-web/keuangan/data/manage
+---
+2015/12/16 13:39:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/GREEN_ADMIN/images/refresh.png".' in /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/GREEN_AD...')
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /mnt/data/Webapps/tahfidz-web/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tahfidz-web/themes/GREEN_ADMIN/images/refresh.png
+HTTP_REFERER=http://localhost/tahfidz-web/themes/GREEN_ADMIN/css/error.css
+---
+2015/12/16 13:40:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /mnt/data/Webapps/tahfidz-web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(282): CController->run('donation')
+#8 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('keuangan/data/d...')
+#9 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /mnt/data/Webapps/tahfidz-web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tahfidz-web/keuangan/data/donation
+HTTP_REFERER=http://localhost/tahfidz-web/keuangan/data/manage
+---
+2015/12/16 13:40:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/GREEN_ADMIN/images/refresh.png".' in /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/GREEN_AD...')
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /mnt/data/Webapps/tahfidz-web/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tahfidz-web/themes/GREEN_ADMIN/images/refresh.png
+HTTP_REFERER=http://localhost/tahfidz-web/themes/GREEN_ADMIN/css/error.css
+---
+2015/12/16 13:42:12 [error] [php] Undefined variable: total_donation (/mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/expenditure.php:27)
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(869): DataController->renderFile()
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(782): DataController->renderPartial()
+#2 /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php(141): DataController->render()
+#3 /mnt/data/Webapps/tahfidz-web/yii/framework/web/actions/CInlineAction.php(49): DataController->actionExpenditure()
+#4 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(133): DataController->runAction()
+#6 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CInlineFilter.php(58): DataController->filterAccessControl()
+#9 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(265): DataController->runActionWithFilters()
+#12 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(282): DataController->run()
+#13 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /mnt/data/Webapps/tahfidz-web/index.php(13): CWebApplication->run()
+REQUEST_URI=/tahfidz-web/keuangan/data/expenditure
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/expenditure.php (27)
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php (141)
+in /mnt/data/Webapps/tahfidz-web/index.php (13)
+2015/12/16 14:01:46 [error] [php] Undefined variable: total_expenditure (/mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/donation.php:40)
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(869): DataController->renderFile()
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(782): DataController->renderPartial()
+#2 /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php(107): DataController->render()
+#3 /mnt/data/Webapps/tahfidz-web/yii/framework/web/actions/CInlineAction.php(49): DataController->actionDonation()
+#4 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(133): DataController->runAction()
+#6 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CInlineFilter.php(58): DataController->filterAccessControl()
+#9 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(265): DataController->runActionWithFilters()
+#12 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(282): DataController->run()
+#13 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /mnt/data/Webapps/tahfidz-web/index.php(13): CWebApplication->run()
+REQUEST_URI=/tahfidz-web/keuangan/data/donation
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/donation.php (40)
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php (107)
+in /mnt/data/Webapps/tahfidz-web/index.php (13)
+2015/12/16 14:04:06 [error] [php] Undefined variable: model_expenditure (/mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/donation.php:82)
+Stack trace:
+#0 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(869): DataController->renderFile()
+#1 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(782): DataController->renderPartial()
+#2 /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php(109): DataController->render()
+#3 /mnt/data/Webapps/tahfidz-web/yii/framework/web/actions/CInlineAction.php(49): DataController->actionDonation()
+#4 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(133): DataController->runAction()
+#6 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CInlineFilter.php(58): DataController->filterAccessControl()
+#9 /mnt/data/Webapps/tahfidz-web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CController.php(265): DataController->runActionWithFilters()
+#12 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(282): DataController->run()
+#13 /mnt/data/Webapps/tahfidz-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /mnt/data/Webapps/tahfidz-web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /mnt/data/Webapps/tahfidz-web/index.php(13): CWebApplication->run()
+REQUEST_URI=/tahfidz-web/keuangan/data/donation
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/views/data/donation.php (82)
+in /mnt/data/Webapps/tahfidz-web/protected/modules/keuangan/controllers/DataController.php (109)
+in /mnt/data/Webapps/tahfidz-web/index.php (13)

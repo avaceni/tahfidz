@@ -1,0 +1,78 @@
+/* 
+    Document   : general
+    Created on : Aug 29, 2013, 10:16:54 PM
+    Author     : rizqi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+img{border: none;}
+.treeview ul{background: none;}
+.treeview li:hover{cursor: pointer;}
+.static-height{height: 713px;}
+
+/*.table-tab{display: table-cell;width: 181px;}*/
+.table-display{display: table;width: 100%;}
+.table-row-display{display: table-row;width: 100%;}
+.table-cell-display{display: table-cell;}
+.fix-width-height{top: 0;bottom: 0;left: 0;right: 0;}
+
+.arrow{right: 9px;position: absolute;}
+
+.overflow{overflow: scroll;}
+.overflow-auto{overflow: auto;}
+.border-right{border-right: 1px solid rgb(239, 239, 239);}
+.no-border{border: none;border: 0;}
+.border{border: 1px solid #ddd;}
+.border-top{border-top : 1px solid #ddd;}
+.no-border-side{border-bottom: none;border-left: none;border-right: none;}
+.no-background{background: transparent;}
+
+/*help*/
+.percentage-13{width: 13%;}
+.percentage-87{width: 85%;}
+.left-81{width: 81px;}
+.left-181{width: 181px;}
+.left-241{width: 241px;}
+.left-281{width: 281px;}
+.left-381{width: 381px;}
+.left-481{width: 481px;}
+.left-581{width: 581px;}
+.side-padding-15{padding: 0 15px;}
+.padding-15{padding: 15px 15px;}
+.float-none{float: none;}
+.width-25-percent{width: 25%;}
+.width-50-percent{width: 50%;}
+/*end help*/
+
+/*text*/
+.text-align-left{text-align: left;}
+.text-align-right{text-align: right;}
+.text-bold{ font-weight: bold;}
+.text-subtitle{font-weight: 600;display: block;padding-bottom: 5px;}
+.text-mutted{display: block;color: #999;font-size: 13px;}
+/*end text*/
+
+/*background*/
+.white{background: #fff;}
+/*end background*/
+
+/*img*/
+/*end img*/
+
+/*awal cols*/
+[class^="col-"]{
+    float: left;
+    padding: 0 10px;
+}
+.col-15-percentage{width: 15%;}
+.col-25-percentage{width: 25%;}
+.col-35-percentage{width: 35%;}
+.col-50-percentage{width: 50%;}
+.col-75-percentage{width: 75%;}
+/*akhir cols*/

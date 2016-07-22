@@ -1,0 +1,127 @@
+/* 
+    Document   : general
+    Created on : Aug 29, 2013, 10:16:54 PM
+    Author     : rizqi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+img{border: none;}
+.treeview ul{background: none;}
+.treeview li:hover{cursor: pointer;}
+.static-height{height: 713px;}
+
+/*.table-tab{display: table-cell;width: 181px;}*/
+.table-display{display: table;width: 100%;}
+.table-cell-display{display: table-cell;}
+.fix-width-height{top: 0;bottom: 0;left: 0;right: 0;}
+
+.arrow{right: 9px;position: absolute;}
+
+.overflow{overflow: scroll;}
+.overflow-auto{overflow: auto;}
+.border-right{border-right: 1px solid rgb(239, 239, 239);}
+.no-border{border: none;border: 0;}
+.border{border: 1px solid #ddd;}
+.border-top{border-top : 1px solid #ddd;}
+.no-border-side{border-bottom: none;border-left: none;border-right: none;}
+.no-background{background: transparent;}
+
+/*help*/
+.percentage-13{width: 13%;}
+.percentage-87{width: 85%;}
+.left-81{width: 81px;}
+.left-181{width: 181px;}
+.left-281{width: 281px;}
+.left-381{width: 381px;}
+.left-481{width: 481px;}
+.left-581{width: 581px;}
+.side-padding-15{padding: 0 15px;}
+.padding-15{padding: 15px 15px;}
+.padding-0{padding: 0;}
+.float-none{float: none;}
+.caret{
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid;
+    display: inline-block;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    width: 0;
+}
+/*end help*/
+
+/*text*/
+.text-align-left{text-align: left;}
+.text-align-right{text-align: right;}
+.text-align-center{text-align: center;}
+.text-bold{ font-weight: bold;}
+.text-subtitle{font-weight: 600;display: block;padding-bottom: 5px;}
+.text-mutted{display: block;color: #999;font-size: 13px;}
+/*end text*/
+
+/*awal h*/
+h1, h2, h3, h4{
+    font-weight: 500;
+}
+/*akhir h*/
+
+/*background*/
+.white{background: #fff;}
+/*end background*/
+
+/*img*/
+/*end img*/
+
+/*awal cols*/
+[class^="col-"]{
+    float: left;
+    padding: 0 10px;
+}
+.col-5-percentage{width: 5%;}
+.col-10-percentage{width: 10%;}
+.col-15-percentage{width: 15%;}
+.col-20-percentage{width: 20%;}
+.col-25-percentage{width: 25%;}
+.col-30-percentage{width: 30%;}
+.col-35-percentage{width: 35%;}
+.col-40-percentage{width: 40%;}
+.col-45-percentage{width: 45%;}
+.col-50-percentage{width: 50%;}
+.col-55-percentage{width: 55%;}
+.col-60-percentage{width: 60%;}
+.col-65-percentage{width: 65%;}
+.col-70-percentage{width: 70%;}
+.col-75-percentage{width: 75%;}
+.col-80-percentage{width: 80%;}
+.col-85-percentage{width: 85%;}
+.col-90-percentage{width: 90%;}
+.col-95-percentage{width: 95%;}
+.col-100-percentage{width: 100%;}
+/*akhir cols*/
+
+
+@media screen and (max-width:800px){
+}
+@media screen and (max-width:768px){
+}
+
+@media screen and (max-width:720px){
+}
+@media screen and (max-width:540px){
+    [class^="col-"]{
+        float: none;
+        padding: 7px 0px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:480px){
+}
+@media only screen and (max-width:320px){
+}

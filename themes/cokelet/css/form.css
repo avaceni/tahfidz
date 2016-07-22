@@ -1,0 +1,131 @@
+.row{
+    display: block;
+    padding: 7px 0px;
+    /*padding: 15px 0px;*/
+    clear: both;
+}
+
+.row > span{
+    float: left;
+    position: relative;
+    width: 123px;
+}
+
+.checkbox-list{
+    float: left;
+    position: relative;
+/*    width: 123px;*/
+}
+.row-label >  label{
+    color: #636E7B;
+    padding: 0 11px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.row-label >  label.text-align-left{
+    text-align: left;
+}
+
+.row > span > label:last-child{
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.row-span-title{
+    background: red;
+    float: left;
+}
+
+.buttons{
+    border-top: 1px solid #dddcdc;
+    border: none;
+    background: #e0e0da;
+}
+input[type="text"], input[type="password"], input[type="file"], select, textArea{
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;*/
+    color: #555555;
+    display: block;
+    /*font-size: 14px;*/
+    padding: 10px;
+    /*line-height: 1.42857;*/
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+input[type="checkbox"]{vertical-align: middle;cursor: pointer;}
+
+/*input:focus{padding: 10px;}*/
+cleditorMain{
+    border: 1px solid #CCCCCC;
+}
+
+.input-width-100{width: 100%;}
+
+input.error{border: 1px solid #b94a48}
+
+option{
+    padding-left: 7px;
+}
+
+input:focus, select:focus{
+    
+}
+
+.errorMessage{
+    padding-top: 7px;
+    color: #b94a48;
+}
+
+.cancelButton{
+    text-align: center;
+    background: #000;
+    border: 1px solid #196570;
+    padding: 5px 13px;
+    color: #ffffff;
+    text-shadow: 0 1px #5a3e1e;
+}
+
+/*row*/
+.row-desc{
+    font-size: 11px;
+    padding-top: 7px;
+    width: auto;
+    margin-right: 9px;
+    /*margin-left: 169px;*/
+    color: #999999;
+}
+.row-label, .row-input{padding: 0 10px;float: left;}
+/*.row-label, .row-input{padding: 0 10px;}*/
+.row-label{min-width: 171px;padding: 5px;}
+label{vertical-align: middle;display: block;color: #666666;}
+.row-input{display: block;}
+
+.grid-view .filters input, .grid-view .filters select{width: auto;}
+
+span.required{color: red;}
+
+/*.errorSummary{padding: 15px;}*/
+
+@media screen and (max-width:800px){
+    
+}
+@media screen and (max-width:768px){
+
+}
+
+@media screen and (max-width:720px){
+
+}
+@media screen and (max-width:540px){
+    .row-label label{vertical-align: middle;display: block;text-align: left;}
+    .row-label, .row-input{float:none;}
+
+}
+@media screen and (max-width:480px){
+/*    .row-label label{vertical-align: middle;display: block;text-align: left;}*/
+}
+@media only screen and (max-width:320px){
+/*    .row-label label{vertical-align: middle;display: block;text-align: left;}*/
+}

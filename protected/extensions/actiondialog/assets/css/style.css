@@ -1,0 +1,30 @@
+.actiondialog-box{
+    display: none;
+    background: #ffffff;
+    width: 51%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    top:20%;
+    left:23%;
+}
+#dialog-overlay {
+  position:fixed !important;
+  position:absolute;
+  z-index:999;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background-color:#000;
+  display:none;
+  z-index: 1;
+}
+
+#loading-dialog-overlay{
+    position: absolute;
+    top: 33%;
+    left: 43%;
+    background: #fff;
+    padding: 7px;
+}

@@ -1,0 +1,318 @@
+<div class="feature">
+    <div class="container">
+        <div class="feature-slider">
+            <ul id="featureSlider">
+
+                <?php
+                foreach ($feature as $aq_category) {
+                    ?>
+                    <li>
+                        <div class="feature-list-box">
+                            <div class="feature-content">
+                                <div class="image-box">
+                                    <img src="
+                                    <?php isset($aq_category->image) ? print Yii::app()->baseUrl . $aq_category->image  : print Yii::app()->baseUrl . '/images/resource/profile.jpg'  ?>
+                                         ">
+                                </div>
+                                <div class="feature-content-detail">
+                                    <h3 class="font-light"> <?php echo $aq_category->category; ?> </h3>
+                                    <div class="author">
+                                        <span>bersama</span>
+                                        <?php
+                                        $iu = 0;
+                                        foreach ($aq_category->skilled_aq as $content) {
+                                            ?>
+                                            <a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $content->user->id)); ?>">
+                                                <?php
+                                                echo $content->user->full_name;
+                                                $iu++;
+                                            }
+                                            ?>
+                                        </a>
+                                    </div>
+                                    <p> <?php echo $aq_category->detail; ?> </p>
+                                    <a href="<?php echo Yii::app()->createUrl("front/page/kategorikonsultasi", array('cid'=>$aq_category->id, $aq_category->category)) ?>" class="button medium">Konsultasi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <?php }; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="body" id="home">
+    <div class="container">
+        <div class="wrapper-content">
+            <div class="content">
+                <div class="headline">
+                    <div class="slide-news">
+                        <ul id="newsSlider">
+
+                            <?php
+                            foreach ($selection as $content) {
+                                ?>
+                                <li>
+                                    <img src="<?php echo Yii::app()->baseUrl . $content->image_cover ?>" alt="<?php echo Yii::app()->createUrl($this->getDetailContentUrl(1), array('id' => 1)) ?>">
+                                    <div class="caption">
+                                        <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" title=""><?php echo $content->title ?></a>
+                                        <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span></p>
+                                        <p><?php echo $content->description ?></p>
+                                    </div>
+                                </li>
+                            <?php } ?>                            
+                        </ul>
+                        <div id="slide-control">
+                            <?php
+                            $i = 0;
+                            foreach ($selection as $content) {
+                                ?>
+                                <a data-slide-index="<?php echo $i ?>" href="">
+                                    <img src="<?php echo Yii::app()->baseUrl . $content->image_thumbnail ?>">
+                                    <div class="caption-box">
+                                        <span><?php echo $content->description ?></span>
+                                    </div>
+                                </a>                                                            
+                                <?php
+                                $i++;
+                            }
+                            ?> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular-news-box table">
+                    <?php
+                    foreach ($popular as $content) {
+                        $cn = 0;
+                        foreach ($content['comment'] as $comment) {
+                            $cn++;
+                        }
+                        ?>
+                        <div class="column top-news">                        
+                            <div class="image-box">
+                                <img src="<?php echo Yii::app()->baseUrl . $content->image_popular ?>" alt="#">
+                                <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" class="comment"><?php echo $cn ?></a>
+                            </div>
+                            <div class="intro">
+                                <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" title=""><?php echo $content->title ?></a>
+                                <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span></p>
+                                <p><?php echo $content->description ?>
+                                </p>
+                                <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" class="button small orange more">Selengkapnya</a>
+                            </div>
+                        </div>
+                        <?php
+                        break;
+                    }
+                    ?>
+                    <div class="column popular-news">
+                        <h4>Berita Terpopuler</h4>
+                        <ul>
+                            <?php
+                            $ip = 1;
+                            foreach ($popular as $content) {
+                                $cn = 0;
+                                foreach ($content['comment'] as $comment) {
+                                    $cn++;
+                                }
+                                if ($ip != 1) {
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" title=""><?php echo $content->title ?></a>
+                                        <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span><a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" class="comment"><?php echo $cn ?></a></p>
+                                    </li>
+                                    <?php
+                                }$ip++;
+                            }
+                            ?>         
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="article-box">
+                    <div class="title-box">
+                        <h4>Sentuhan Hikmah</h4>
+                        <a href="<?php echo Yii::app()->createUrl("front/page/sentuhanhikmah"); ?>" class="link-index" title="Arsip"></a>
+                    </div>
+                    <?php
+                    foreach ($mutiara as $content) {
+                        $cn = 0;
+                        foreach ($content['comment'] as $comment) {
+                            $cn++;
+                        }
+                        ?>
+                        <div class="article-list">
+                            <div class="article-image">
+                                <div class="image-box">
+                                    <img src="<?php echo Yii::app()->baseUrl . $content->image_list ?>" alt="#">
+                                    <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" class="comment"><?php echo $cn ?></a>
+                                </div>
+                            </div>
+                            <div class="intro">
+                                <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" title=""><?php echo $content->title ?></a>
+                                <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span><a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $content->created_by)); ?>" class="author"><?php echo isset($content->createdBy)?$content->createdBy->full_name:''; ?></a></p>
+                                <p><?php echo $content->description ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+                <div class="article-box">
+                    <div class="title-box">
+                        <h4>Mutiara Qur'an</h4>
+                        <a href="<?php echo Yii::app()->createUrl("front/page/mutiaraquran"); ?>" class="link-index" title="Arsip"></a>
+                    </div>
+                    <?php
+                    foreach ($sentuhan as $content) {
+                        $cn = 0;
+                        foreach ($content['comment'] as $comment) {
+                            $cn++;
+                        }
+                        ?>
+                        <div class="article-list">
+                            <div class="article-image">
+                                <div class="image-box">
+                                    <img src="<?php echo Yii::app()->baseUrl . $content->image_list ?>" alt="#">
+                                    <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" class="comment"><?php echo $cn ?></a>
+                                </div>
+                            </div>
+                            <div class="intro">
+                                <a href="<?php echo Yii::app()->createUrl($this->getDetailContentUrl($content->content_type_id), array('id' => $content->id)) ?>" title=""><?php echo $content->title ?></a>
+                                <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span><a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $content->created_by)); ?>" class="author"><?php echo isset($content->createdBy->full_name)?$content->createdBy->full_name:'';?></a></p>
+                                <p><?php echo $content->description ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="widget-box consultation">
+                    <h4>Konsultasi</h4>
+                    <ul>
+                        <?php
+                        foreach ($aq as $content) {
+                            ?>
+                            <li>
+                                <a class="category" href="<?php echo Yii::app()->createUrl("front/page/kategorikonsultasi", array('cid' => $content->category_id, '0' => $content->category->category)); ?>"><?php echo $content->category->category ?></a>
+                                <p class="meta"><span class="date"><?php echo Utility::getDateFormat($content->created_time) ?></span></p>
+                                <p><?php echo $content->question ?></p>
+                                <a href="<?php echo Yii::app()->createUrl("front/page/detailkonsultasi", array('id' => $content->id, '0' => $content->category->category)); ?>" class="link-more">Selengkapnya</a>
+                                <?php if(isset($content->answeredBy)){?>
+                                <p class="meta"><span>oleh</span><a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $content->answeredBy->id)); ?>" class="author"><?php echo $content->answeredBy->full_name ?></a></p>
+                                <?php }?>
+                            </li>               
+                        <?php } ?>
+                    </ul>
+                    <div class="button-box-sidebar">
+                        <a href="#" class="button medium">Konsultasi</a>
+                    </div>
+                </div>
+                <div class="widget-box magazine">
+                    <h4>Swaraikadi Magazine</h4>
+                    <?php
+                    foreach ($magazine as $content) {
+                        ?>
+                        <a class="image-box various fancybox.iframe" href="<?php echo Yii::app()->createUrl("front/page/magazine"); ?>">
+                            <img src="<?php echo Yii::app()->baseUrl . $content->cover_image ?>" alt="#">
+                        </a>
+                        <?php
+                        break;
+                    }
+                    ?>
+                    <ul>
+                        <?php
+                        foreach ($magazine as $content) {
+                            ?>
+                            <li><a href="<?php echo Yii::app()->baseUrl . $content->url ?>" onclick="return countDownload(<?php echo $content->id ?>);"><?php echo $content->title ?></a></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+
+                    <div class="button-box-sidebar">
+                        <a href="<?php echo Yii::app()->createUrl("front/page/download"); ?>" class="button medium">Arsip</a>
+                    </div>
+                </div>
+                <div class="widget-box info">
+                    <h4>Info Kajian</h4>
+                    <?php
+                    $image = array();
+                    foreach ($program as $content) {
+                        $image[] = $content->image;
+                    }
+                    shuffle($image);
+                    ?>
+                    <a class="image-box" href="<?php echo Yii::app()->createUrl("front/page/info"); ?>">
+                        <img src="<?php echo Yii::app()->baseUrl . $image[0] ?>" alt="<?php echo Yii::app()->createUrl("front/page/info"); ?>">
+                    </a>
+                </div>
+                <div class="widget-box donate">
+                    <h4>Rekening Donasi</h4>
+                    <div class="donate-detail">
+                        <img src="<?php echo Yii::app()->baseUrl . $bank->bank_logo ?>">
+                        <b><?php echo $bank->bank_name ?></b>
+                        <span><i>No. Rek.</i><strong><?php echo $bank->account_number ?></strong></span>
+                        <b>a/n <?php echo $bank->account_name ?></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="highlight table">
+            <div class="column">
+                <div class="dai-profile">
+                    <div class="title-box">
+                        <h4>Profil Da'i</h4>
+                        <a href="<?php echo Yii::app()->createUrl("front/profil/dai"); ?>" class="link-index" title="Arsip"></a>
+                    </div>
+                    <div class="profile-info">
+                        <?php
+                        $io = 0;
+                        $profile = array();
+                        foreach ($chaplain as $content) {
+                            $profile[$io]['id'] = $content->id;
+                            $profile[$io]['name'] = $content->full_name;
+                            $profile[$io]['image'] = $content->photo;
+                            $profile[$io]['description'] = Utility::shortText($content->description, 200, '');
+                            $io++;
+                        }
+                        shuffle($profile);
+                        ?>
+                        <div class="image-box">
+                            <img src="<?php echo Yii::app()->baseUrl . $profile[0]['image'] ?>">
+                        </div>
+                        <div class="profile-detail">
+                            <a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $profile[0]['id'])); ?>"><?php echo $profile[0]['name'] ?></a>
+                            <p><?php echo $profile[0]['description'] ?></p>
+                            <a href="<?php echo Yii::app()->createUrl("front/profil/detaildai", array('id' => $profile[0]['id'])); ?>" class="button small orange more">Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <?php
+                $hadits_show = array();
+                $ih = 0;
+                foreach ($hadits as $content) {
+                    $hadits_show[$ih]['content'] = $content->content;
+                    $ih++;
+                }
+                shuffle($hadits_show);
+                ?>
+                <div class="hadist">
+                    <div class="title-box">
+                        <h4>Mutiara Hadist</h4>
+                        <a href="#" class="link-index" title="Arsip"></a>
+                    </div>
+                    <div class="content-box">
+                        <p><?php isset($hadits_show[0]) ? printf(Utility::shortText($hadits_show[0]['content'], 400, '...')) : '' ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

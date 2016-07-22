@@ -1,0 +1,44 @@
+table{
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+table td,table th{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.pdf-body{
+    font-family: sans-serif;
+}
+.pdf-header{
+    font-size: 25px;
+    padding: 5px 0 0 20px;
+}
+.pdf-header-2{
+    font-size: 20px;
+    padding: 10px 0 10px 20px;
+}
+.pdf-form-group{
+    /*background-color: #00b3ee;*/
+    width: 100%;
+    padding: 5px 0 5px 120px;
+}
+
+.pdf-control-label{
+    font-weight: normal;
+    /*background-color: #f2dede;*/
+    color: #464646;
+    width: 40%;
+    float: left;
+}
+
+.pdf-detail-view{
+    /*background-color: #C5FBBD;*/
+    width: 50%;
+    float: left;
+    color: #111111;
+}

@@ -1,0 +1,100 @@
+/* 
+    Document   : error
+    Created on : Mar 25, 2013, 6:21:31 PM
+    Author     : rizqi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
+*{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: 'Open Sans', Tahoma, Arial, Helvetica, sans-serif;
+/*    text-shadow: 0px 3px 0px #313a43;*/
+}
+
+body{
+    background: #FFF;
+}
+header{
+    background: #6b2888;
+    padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #E1E1E1;
+}
+header .container{
+    width: 95%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+#container{
+    overflow: hidden;
+    display: table;
+    margin: 10% auto;
+    padding: 2%;
+    text-align: center;
+    width: 50%;
+}
+#container .column{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+h2{
+    font-size: 80px;
+    font-weight: 100;
+    color: #ABC60A;
+}
+a.main-button{
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #E1E1E1;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+a.main-button:hover{
+    text-decoration: underline;
+}
+a.reload{
+    float: right;
+    width: 50px;
+    height: 50px;
+    background: url(../images/refresh.png) 0 0 no-repeat;
+}
+a.reload:hover{
+    background-position: -50px 0;
+}
+
+.number-error{
+    font-size: 80px;
+    display: block;
+    width: 250px;
+    height: 250px;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 250px;
+    text-align: center;
+    background: url(../images/balon.png) center no-repeat;
+}
+
+.error{
+    font-size: 19px;
+}

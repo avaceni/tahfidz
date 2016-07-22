@@ -1,0 +1,2 @@
+$ java -jar yuicompressor-2.4.8.jar --type css style.css > style_min.css
+$ java -jar yuicompressor-2.4.8.jar --type js animation.js > animation_min.js
